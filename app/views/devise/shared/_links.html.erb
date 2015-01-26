@@ -15,7 +15,7 @@
 <% end -%>
 
 <%- if devise_mapping.lockable? && resource_class.unlock_strategy_enabled?(:email) && controller_name != 'unlocks' %>
-  <%= link_to "NO recibio las instruciones de desbloqueo?", new_unlock_path(resource_name) %><br />
+  <%= link_to "No recibio las instruciones de desbloqueo?", new_unlock_path(resource_name) %><br />
 <% end -%>
 
 <%- if devise_mapping.omniauthable? %>
