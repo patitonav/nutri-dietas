@@ -1,6 +1,8 @@
-<%= stylesheet_link_tag "registration.css" %>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: 'container'}) do |f| %>
 <%= devise_error_messages! %>
+<div id="bg">
+  <%= image_tag('nutri5.jpg') %>
+</div>
     <div class="row vertical-offset-100">
         <div class="col-md-4 col-md-offset-4">
             <div class="panel panel-default">
