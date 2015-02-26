@@ -1,0 +1,280 @@
+es:
+  date:
+    abbr_day_names:
+    - dom
+    - lun
+    - mar
+    - mié
+    - jue
+    - vie
+    - sáb
+    abbr_month_names:
+    -
+    - ene
+    - feb
+    - mar
+    - abr
+    - may
+    - jun
+    - jul
+    - ago
+    - sep
+    - oct
+    - nov
+    - dic
+    day_names:
+    - domingo
+    - lunes
+    - martes
+    - miércoles
+    - jueves
+    - viernes
+    - sábado
+    formats:
+      default: ! '%d/%m/%Y'
+      long: ! '%A, %d de %B de %Y'
+      short: ! '%d de %b'
+    month_names:
+    -
+    - enero
+    - febrero
+    - marzo
+    - abril
+    - mayo
+    - junio
+    - julio
+    - agosto
+    - septiembre
+    - octubre
+    - noviembre
+    - diciembre
+    order:
+    - :day
+    - :month
+    - :year
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: cerca de 1 hora
+        other: cerca de %{count} horas
+      about_x_months:
+        one: cerca de 1 mes
+        other: cerca de %{count} meses
+      about_x_years:
+        one: cerca de 1 año
+        other: cerca de %{count} años
+      almost_x_years:
+        one: casi 1 año
+        other: casi %{count} años
+      half_a_minute: medio minuto
+      less_than_x_minutes:
+        one: menos de 1 minuto
+        other: menos de %{count} minutos
+      less_than_x_seconds:
+        one: menos de 1 segundo
+        other: menos de %{count} segundos
+      over_x_years:
+        one: más de 1 año
+        other: más de %{count} años
+      x_days:
+        one: 1 día
+        other: ! '%{count} días'
+      x_minutes:
+        one: 1 minuto
+        other: ! '%{count} minutos'
+      x_months:
+        one: 1 mes
+        other: ! '%{count} meses'
+      x_seconds:
+        one: 1 segundo
+        other: ! '%{count} segundos'
+    prompts:
+      day: Día
+      hour: Hora
+      minute: Minuto
+      month: Mes
+      second: Segundos
+      year: Año
+  errors:
+    format: ! '%{attribute} %{message}'
+    messages:
+      accepted: debe ser aceptado
+      blank: no puede estar en blanco
+      confirmation: no coincide
+      empty: no puede estar vacío
+      equal_to: debe ser igual a %{count}
+      even: debe ser un número par
+      exclusion: está reservado
+      greater_than: debe ser mayor que %{count}
+      greater_than_or_equal_to: debe ser mayor o igual que %{count}
+      inclusion: no está incluido en la lista
+      invalid: es inválido
+      less_than: debe ser menor que %{count}
+      less_than_or_equal_to: debe ser menor o igual que %{count}
+      not_a_number: no es un número
+      not_an_integer: debe ser un entero
+      odd: debe ser un número non
+      record_invalid: ! 'La validación falló: %{errors}'
+      taken: ya ha sido tomado
+      too_long:
+        one: es demasiado largo (máximo 1 caracter)
+        other: es demasiado largo (máximo %{count} caracteres)
+      too_short:
+        one: es demasiado corto (mínimo 1 caracter)
+        other: es demasiado corto (mínimo %{count} caracteres)
+      wrong_length:
+        one: longitud errónea (debe ser de 1 caracter)
+        other: longitud errónea (debe ser de %{count} caracteres)
+    template:
+      body: ! 'Revise que los siguientes campos sean válidos:'
+      header:
+        one: ! '%{model} no pudo guardarse debido a 1 error'
+        other: ! '%{model} no pudo guardarse debido a %{count} errores'
+  helpers:
+    select:
+      prompt: Por favor selecciona
+    submit:
+      create: Crear %{model}
+      submit: Guardar %{model}
+      update: Actualizar %{model}
+    links:
+      edit: Editar
+  number:
+    currency:
+      format:
+        delimiter: .
+        format: ! '%u%n'
+        precision: 2
+        separator: ! ','
+        significant: false
+        strip_insignificant_zeros: false
+        unit: $
+    format:
+      delimiter: .
+      precision: 2
+      separator: ! ','
+      significant: false
+      strip_insignificant_zeros: false
+    human:
+      decimal_units:
+        format: ! '%n %u'
+        units:
+          billion: mil millones
+          million: millón
+          quadrillion: mil billones
+          thousand: mil
+          trillion: billón
+          unit: ''
+      format:
+        delimiter: ! ','
+        precision: 3
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: ! '%n %u'
+        units:
+          byte:
+            one: Byte
+            other: Bytes
+          gb: GB
+          kb: KB
+          mb: MB
+          tb: TB
+    percentage:
+      format:
+        delimiter: ! ','
+    precision:
+      format:
+        delimiter: ! ','
+  support:
+    array:
+      last_word_connector: ! ' y '
+      two_words_connector: ! ' y '
+      words_connector: ! ', '
+  time:
+    am: am
+    formats:
+      default: ! '%a, %d de %b de %Y a las %H:%M:%S %Z'
+      long: ! '%A, %d de %B de %Y a las %I:%M %p'
+      short: ! '%d de %b a las %H:%M hrs'
+    pm: pm
+  activerecord:
+    models:
+      publication: Publicación
+      user: Usuario
+    attributes:
+      user:
+        email: "Correo electrónico"
+        full_name: "Nombre completo"
+        phone: "Teléfono"
+        password: "Contraseña"
+        password_confirmation: "Confirmar contraseña"
+        current_password: "Contraseña actual"
+        remember_me: "Recordarme"
+        name: "Nombres"
+        last_name: "Apellidoss"
+        address: "Direccion"
+        city: "Ciudad"
+        country: "Pais"
+        phone: "Telefono"
+        cellphone: "Celular"
+        social_security: "Obra Social"
+        social_security_plan: "Plan"
+        social_security_number: "Nº Socio"
+        marital_status: "Estado civil"
+        sex: "Sexo"
+        birhtday: "Fecha de nacimiento"
+        profesion: "Profesión/Ocupación"
+        job_hs: "Horas de trabajo diarias"
+        job_type: "Tipo de trabajo"
+        weight_max: "Peso maximo (edad adulta)"
+        weight_min: "Peso minimo (edad adulta)"
+        weight_avg: "Peso habitual (edad adulta)"
+        weight_now: "Peso actual"
+        weight_exp: "Peso al que quiere llegar"
+        objective: "Objetivo"
+        family: "¿Con quién vive?"
+        cooks: "¿Quién cocina?"
+        allergies: "¿Cuales?"
+        kosher: "Kosher"
+        vegetarian: "Vegetariano"
+        ovolacto: "Ovolacto"
+        lacto: "Lacto"
+        celiac: "Celiac"
+        pork: "Cerdo"
+        meat: "Carnes rojas"
+        chicken: "Pollo"
+        fish: "Pescado"
+        swallowing: "Deglución"
+        mastication: " Masticación"
+        nausea: "Nauseas"
+        diarrhea: "Diarrea"
+        vomits: " Vómitos"
+        constipation: "Estreñimiento"
+        anemia: "Anemia"
+        hypertension: "Hipertensión"
+        diabetes: "Diabetes"
+        heart_problems: "Problemas cardíacos"
+        overweight: "Obesidad/Sobrepeso"
+        cholesterol: "Colesterol alto"
+        bulimia: "Bulimia"
+        anorexia: "Anorexia"
+        cancer: "Cancer"
+        cancer_type: "Tipo de Cancer"
+        illness_other: "Otra enfermedad"
+        smoker: "Fumador"
+        smoker_amount: "Cantidad por dia"
+        medication: "Medicacion (incluir anticonceptivos)"
+        wrist_size: "Circunferencia de muñeca (mano no hábil)"
+        height: "Altura"
+        vitamins: "¿Toma algun suplemento?"
+        sport1: "Actividad fisica"
+        sport1_frecuency: "Frecuencia semanal"
+        sport2: "Actividad fisica"
+        sport2_frecuency: "Frecuencia semanal"
+        sport3: "Actividad fisica"
+        sport3_frecuency: "Frecuencia semanal"
+        menstruation: "Ultima menstruacion"
+        how_meet: "¿Cómo conoció a la Prof. Lic. Gabin de Sardoy?"
+        comments: "Comentarios:"
+        buys: "¿Quién hace las compras?"
