@@ -212,7 +212,7 @@ es:
         current_password: "Contraseña actual"
         remember_me: "Recordarme"
         name: "Nombres"
-        last_name: "Apellidoss"
+        last_name: "Apellidos"
         address: "Direccion"
         city: "Ciudad"
         country: "Pais"

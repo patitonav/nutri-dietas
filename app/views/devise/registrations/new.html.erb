@@ -10,13 +10,13 @@
           <div class="panel-body">
             <fieldset>
               <div class = "row">
-                <div class="col-md-4">
+                <div class="col-md-6">
                   <div class="form-group">
                     <%= f.label :name , class: "control-label"%>
                     <%= f.text_field :name, class: "form-control",autofocus: true %>
                   </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-6">
                   <div class="form-group">
                     <%= f.label :last_name , class: "control-label"%>
                     <%= f.text_field :last_name, class: "form-control" %>
@@ -44,13 +44,13 @@
                 </div>
               </div>
               <div class = "row">
-                <div class="col-md-3">
+                <div class="col-md-5">
                   <div class="form-group">
                     <%= f.label :phone, class: "control-label" %>
                     <%= f.text_field :phone, class: "form-control" %>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-5">
                   <div class="form-group">
                     <%= f.label :cellphone , class: "control-label"%>
                     <%= f.text_field :cellphone, class: "form-control" %>
@@ -104,7 +104,7 @@
                     <%= f.text_field :profesion, class: "form-control" %>
                   </div>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-4">
                   <div class="form-group">
                     <%= f.label :job_hs , class: "control-label"%>
                     <%= f.select(:job_hs, User::JOB_HS, {}, {class: "form-control", required: true}) %>
@@ -119,31 +119,33 @@
               </div>
               <%= f.label "Pesos" %>
               <div class="row">
-                <div class="col-md-2">
+                <div class="col-md-3">
                   <div class="form-group">
                     <%= f.label :weight_max, class: "control-label" %>
                     <%= f.text_field :weight_max, class: "form-control" %>
                   </div>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-3">
                   <div class="form-group">
                     <%= f.label :weight_min, class: "control-label"%>
                     <%= f.text_field :weight_min, class: "form-control" %>
                   </div>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-3">
                   <div class="form-group">
                     <%= f.label :weight_avg, class: "control-label" %>
                     <%= f.text_field :weight_avg, class: "form-control" %>
                   </div>
                 </div>
-                <div class="col-md-2">
+              </div>
+              <div class="row">
+                <div class="col-md-3">
                   <div class="form-group">
                     <%= f.label :weight_now, class: "control-label" %>
                     <%= f.text_field :weight_now, class: "form-control" %>
                   </div>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-4">
                   <div class="form-group">
                     <%= f.label :weight_exp, class: "control-label" %>
                     <%= f.text_field :weight_exp, class: "form-control" %>
@@ -155,19 +157,21 @@
                 <%= f.text_area :objective, class: "form-control" %>
               </div>
               <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-8">
                   <div class="form-group">
                     <%= f.label :family %>
                     <%= f.text_field :family, class: "form-control" %>
                   </div>
                 </div>
-                <div class="col-md-2">
+              </div>
+              <div class="row">
+                <div class="col-md-4">
                   <div class="form-group">
                     <%= f.label :cooks %>
                     <%= f.select(:cooks, User::COOKS, {}, {class: "form-control", required: true}) %>
                   </div>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-4">
                   <div class="form-group">
                     <%= f.label :buys %>
                     <%= f.select(:buys, User::BUYS, {}, {class: "form-control", required: true}) %>
@@ -197,7 +201,7 @@
                 </div>
               </div>
               <div class="page-header">
-                <h3><%= label(:registration, :special_food) %></h3>
+                <h3>Comida especial</h3>
               </div>
               <div class="row">
                 <div class="col-md-2">
@@ -236,25 +240,25 @@
                 <%= check_box :registration,:half_vegetarian, checked: true%>
               </div>
               <div class="row">
-                <div class="col-md-2">
+                <div class="col-md-3">
                   <div class="form-group">
                     <%= f.label :pork %>
                     <%= f.check_box :pork,checked: true%>
                   </div>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-3">
                   <div class="form-group">
                     <%= f.label :meat%>
                     <%= f.check_box :meat,checked: true%>
                   </div>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-3">
                   <div class="form-group">
                     <%= f.label :chicken %>
                     <%= f.check_box :chicken,checked: true %>
                   </div>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-3">
                   <div class="form-group">
                     <%= f.label :fish %>
                     <%= f.check_box :fish,checked: true%>
@@ -262,40 +266,42 @@
                 </div>
               </div>
               <div class="page-header">
-                <h3><%= label(:registration, :problems) %></h3>
+                <h3>Problemas</h3>
               </div>
               <div class="row">
-                <div class="col-md-2">
+                <div class="col-md-3">
                   <div class="form-group">
                     <%= f.label :swallowing %>
                     <%= f.check_box :swallowing,checked: false%>
                   </div>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-3">
                   <div class="form-group">
                     <%= f.label :mastication %>
                     <%= f.check_box :mastication,checked: false%>
                   </div>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-3">
                   <div class="form-group">
                     <%= f.label :nausea %>
                     <%= f.check_box :nausea,checked: false %>
                   </div>
                 </div>
-                <div class="col-md-2">
+              </div>
+              <div class="row">
+                <div class="col-md-3">
                   <div class="form-group">
                     <%= f.label :diarrhea %>
                     <%= f.check_box :diarrhea,checked: false%>
                   </div>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-3">
                   <div class="form-group">
                     <%= f.label :vomits %>
                     <%= f.check_box :vomits,checked: false%>
                   </div>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-3">
                   <div class="form-group">
                     <%= f.label :constipation %>
                     <%= f.check_box :constipation ,checked: false%>
@@ -303,7 +309,7 @@
                 </div>
               </div>
               <div class="page-header">
-                <h3><%= label(:registration, :illness) %></h3>
+                <h3>Enfermedades</h3>
               </div>
               <div class="row">
                 <div class="col-md-2">
@@ -324,7 +330,7 @@
                     <%= f.check_box :diabetes ,checked: false%>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-4">
                   <div class="form-group">
                     <%= f.label :heart_problems %>
                     <%= f.check_box :heart_problems ,checked: false%>
@@ -332,7 +338,7 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-4">
                   <div class="form-group">
                     <%= f.label :overweight %>
                     <%= f.check_box :overweight ,checked: false%>
@@ -369,7 +375,7 @@
                     <%= f.label :cancer_type ,:id => "cancer_type_label"%>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-6">
                   <div class="form-group">
                     <%= f.text_field :cancer_type, class: "form-control"%>
                   </div>
@@ -432,7 +438,7 @@
                 <%= f.text_field :vitamins, class: "form-control" %>
               </div>
               <div class="page-header">
-                <h3><%= label(:registration, :sport) %></h3>
+                <h3>Deportes</h3>
               </div>
               <div class="row">
                 <div class="col-md-5">         
@@ -441,7 +447,7 @@
                     <%= f.text_field :sport1, class: "form-control" %>
                   </div>
                 </div>
-            <div class="col-md-3">
+            <div class="col-md-5">
               <div class="form-group">
                 <%= f.label :sport1_frecuency %>
                 <%= f.select(:sport1_frecuency, User::SPORT, {}, {class: "form-control"}) %>
@@ -455,7 +461,7 @@
               <%= f.text_field :sport2, class: "form-control" %>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-5">
             <div class="form-group">
               <%= f.label :sport2_frecuency %>
               <%= f.select(:sport2_frecuency, User::SPORT, {}, {class: "form-control"}) %>
@@ -469,7 +475,7 @@
             <%= f.text_field :sport3, class: "form-control" %>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-5">
           <div class="form-group">
             <%= f.label :sport3_frecuency %>
             <%= f.select(:sport3_frecuency, User::SPORT, {}, {class: "form-control"}) %>
