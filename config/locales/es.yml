@@ -139,6 +139,11 @@ es:
       update: Actualizar %{model}
     links:
       edit: Editar
+    label:
+      registration:
+        allergies_true: "¿Es alérgico a algún alimento?"
+        half_vegetarian: "Semi-vegetariano"
+        how_meet: "¿Cuál?"
   number:
     currency:
       format:
@@ -199,7 +204,7 @@ es:
       short: ! '%d de %b a las %H:%M hrs'
     pm: pm
   activerecord:
-    models:
+    models: 
       publication: Publicación
       user: Usuario
     attributes:
@@ -238,9 +243,9 @@ es:
         allergies: "¿Cuales?"
         kosher: "Kosher"
         vegetarian: "Vegetariano"
-        ovolacto: "Ovolacto"
-        lacto: "Lacto"
-        celiac: "Celiac"
+        ovolacto: "Ovolacto vegetariano"
+        lacto: "Lacto vegetariano"
+        celiac: "Celiaco"
         pork: "Cerdo"
         meat: "Carnes rojas"
         chicken: "Pollo"

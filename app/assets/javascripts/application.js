@@ -78,6 +78,11 @@ function allergies() {
 }
 
 $(document).on("ready page:change", function() {
+	how_meet();
+	allergies();
+	cancer();
+	smoker();
+	half_vegetarian();
 	$('#how_meet_select').change(function () {how_meet();});
 	$('#registration_how_meet').change(function () {how_meet();});
 	$('#allergies_true').change(function () {allergies();});
