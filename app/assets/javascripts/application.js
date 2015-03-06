@@ -35,6 +35,7 @@ function half_vegetarian() {
 		$('#user_meat').attr('disabled', false);
 		$('#user_chicken').attr('disabled', false);
 		$('#user_fish').attr('disabled', false);
+		$('#alert-div').show();
 	} else {
 		$('#user_pork').attr('disabled', true);
 		$('#user_pork').prop('checked', true);
@@ -44,6 +45,7 @@ function half_vegetarian() {
 		$('#user_chicken').prop('checked', true);
 		$('#user_fish').attr('disabled', true);
 		$('#user_fish').prop('checked', true);
+		$('#alert-div').hide();
 	}      
 }
 function cancer() {
