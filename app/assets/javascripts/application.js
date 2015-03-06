@@ -15,7 +15,7 @@
 //= require jquery_ujs
 //= require jquery-ui
 //= require_tree .
-
+//= require bootstrap-datepicker
 
 function how_meet() {
 	if( ($('#how_meet_select').val() == "PACIENTE: ") || ($('#how_meet_select').val() == "DOCTOR: " ) || ($('#how_meet_select').val() == "OTRO: ") ) {
@@ -85,6 +85,10 @@ $(document).on("ready page:change", function() {
 	cancer();
 	smoker();
 	half_vegetarian();
+	$('.datepicker').datepicker({
+    	format: "dd/mm/yyyy",
+    	startView: 2
+	});
 	$('#how_meet_select').change(function () {how_meet();});
 	$('#registration_how_meet').change(function () {how_meet();});
 	$('#allergies_true').change(function () {allergies();});
@@ -94,3 +98,4 @@ $(document).on("ready page:change", function() {
 
 
 });
+

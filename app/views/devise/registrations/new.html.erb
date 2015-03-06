@@ -90,10 +90,10 @@
                     <%= f.select(:sex, User::SEX, {}, {class: "form-control", required: true}) %>
                   </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-5">
                   <div class="form-group">
                     <%= f.label :birhtday , class: "control-label"%>
-                    <%= f.text_field :birhtday, class: "form-control" %>
+                    <%= f.text_field :birhtday, class: "datepicker" %>
                   </div>
                 </div>
               </div>
@@ -318,7 +318,7 @@
                     <%= f.check_box :anemia ,checked: false%>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                   <div class="form-group">
                     <%= f.label :hypertension %>
                     <%= f.check_box :hypertension ,checked: false%>
@@ -356,7 +356,7 @@
                     <%= f.check_box :bulimia ,checked: false %>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                   <div class="form-group">
                     <%= f.label :anorexia %>
                     <%= f.check_box :anorexia ,checked: false%>
