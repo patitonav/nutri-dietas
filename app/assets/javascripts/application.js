@@ -87,7 +87,8 @@ $(document).on("ready page:change", function() {
 	half_vegetarian();
 	$('.datepicker').datepicker({
     	format: "dd/mm/yyyy",
-    	startView: 2
+    	startView: 2,
+    	language: "es"
 	});
 	$('#how_meet_select').change(function () {how_meet();});
 	$('#registration_how_meet').change(function () {how_meet();});
