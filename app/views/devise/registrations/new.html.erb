@@ -4,7 +4,7 @@
       <%= image_tag('nutri5.jpg') %>
     </div>
     <div class="row vertical-offset-100">
-      <div class="col-md-6 col-md-offset-2">
+      <div class="col-md-6 col-md-offset-3">
         <div class="panel panel-default">
           <%= image_tag 'logo-nutri-salud-con-nombre.jpg', size: "450", class: "img-responsive center-block"%>
           <div class="panel-body">
@@ -117,24 +117,37 @@
                   </div>
                 </div>
               </div>
-              <%= f.label "Pesos" %>
+              <h3>Pesos</h3>
+              <hr>
               <div class="row">
                 <div class="col-md-3">
                   <div class="form-group">
                     <%= f.label :weight_max, class: "control-label" %>
-                    <%= f.text_field :weight_max, class: "form-control" %>
+                    <div class="input-group">
+                      <%= f.text_field :weight_max, class: "form-control", placeholder: "0.0" %>
+                      <div class="input-group-addon">kg</div>
+                    </div>
+                    (Edad Adulta)
                   </div>
                 </div>
                 <div class="col-md-3">
                   <div class="form-group">
                     <%= f.label :weight_min, class: "control-label"%>
-                    <%= f.text_field :weight_min, class: "form-control" %>
+                    <div class="input-group">
+                      <%= f.text_field :weight_min, class: "form-control", placeholder: "0.0" %>
+                      <div class="input-group-addon">kg</div>
+                    </div>
+                    (Edad Adulta)
                   </div>
                 </div>
                 <div class="col-md-3">
                   <div class="form-group">
                     <%= f.label :weight_avg, class: "control-label" %>
-                    <%= f.text_field :weight_avg, class: "form-control" %>
+                    <div class="input-group">
+                      <%= f.text_field :weight_avg, class: "form-control", placeholder: "0.0" %>
+                      <div class="input-group-addon">kg</div>
+                    </div>
+                    (Edad Adulta)
                   </div>
                 </div>
               </div>
@@ -142,13 +155,19 @@
                 <div class="col-md-3">
                   <div class="form-group">
                     <%= f.label :weight_now, class: "control-label" %>
-                    <%= f.text_field :weight_now, class: "form-control" %>
+                    <div class="input-group">
+                      <%= f.text_field :weight_now, class: "form-control", placeholder: "0.0" %>
+                      <div class="input-group-addon">kg</div>
+                    </div>
                   </div>
                 </div>
                 <div class="col-md-3">
                   <div class="form-group">
                     <%= f.label :weight_exp, class: "control-label" %>
-                    <%= f.text_field :weight_exp, class: "form-control" %>
+                    <div class="input-group">
+                      <%= f.text_field :weight_exp, class: "form-control", placeholder: "0.0" %>
+                      <div class="input-group-addon">kg</div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -418,18 +437,24 @@
                 </div>
                 <div class="col-md-3">
                   <div class="form-group">
-                    <%= f.text_field :wrist_size, class: "form-control" %>
-                    (Mano no hábil  )
+                    <div class="input-group">
+                      <%= f.text_field :wrist_size, class: "form-control" , placeholder: "0.0" %>
+                      <div class="input-group-addon">cm</div>
+                    </div>
+                    (Mano no hábil)
                   </div>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-2">`
                   <div class="form-group">
                     <%= f.label :height %>
                   </div>
                 </div>
                 <div class="col-md-3">
                   <div class="form-group">
-                    <%= f.text_field :height, class: "form-control" %>
+                    <div class="input-group">
+                      <%= f.text_field :height, class: "form-control" , placeholder: "0.0" %>
+                      <div class="input-group-addon">m</div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -484,9 +509,13 @@
         </div>
       </div>
       <hr>
-      <div class="form-group">
-        <%= f.label :menstruation %>
-        <%= f.text_field :menstruation, class: "datepicker", readonly:true, style:"background:white;cursor:default;", disabled: false %>
+      <div class="row">
+         <div class="col-md-5"> 
+          <div class="form-group">
+            <%= f.label :menstruation , :id => "menstruation_label"%>
+            <%= f.text_field :menstruation, class: "datepicker", readonly:true, style:"background:white;cursor:default;", disabled: false %>
+          </div>
+        </div>
       </div>
       <hr>
       <div class="form-group">
@@ -494,7 +523,7 @@
         <%= select(:how_meet,:select ,[['Cartilla de DOSUBA','CARTILLA DE DOSUBA'],['Cartilla de OSDE','CARTILLA DE OSDE'],['Internet','INTERNET'],['TV','TV'],['Medios Graficos','MEDIOS GRAFICOS'],['Otro Paciente','PACIENTE: '],['Otro Profesional','DOCTOR: '],['Otro','OTRO: ']], {},required: true) %>
       </div>
       <div class="form-group">
-        <%= label_tag(:registration,:how_meet, id: 'how_meet_tag')%>
+        <%= label_tag("¿Cuál?",nil, id: 'how_meet_tag')%>
         <%= text_field(:registration, :how_meet, class: "form-control")%>
         <%= f.text_field(:how_meet, :style => 'visibility: hidden') %>
       </div>

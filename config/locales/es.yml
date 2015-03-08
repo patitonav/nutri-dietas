@@ -143,7 +143,7 @@ es:
       registration:
         allergies_true: "¿Es alérgico a algún alimento?"
         half_vegetarian: "Semi-vegetariano"
-        how_meet: "¿Cuál?"
+        how_meet_tag: "¿Cuál?"
   number:
     currency:
       format:
@@ -232,9 +232,9 @@ es:
         profesion: "Profesión/Ocupación"
         job_hs: "Hs de trabajo diarias"
         job_type: "Tipo de trabajo"
-        weight_max: "Peso maximo (edad adulta)"
-        weight_min: "Peso minimo (edad adulta)"
-        weight_avg: "Peso habitual (edad adulta)"
+        weight_max: "Peso maximo"
+        weight_min: "Peso minimo"
+        weight_avg: "Peso habitual"
         weight_now: "Peso actual"
         weight_exp: "Peso deseado"
         objective: "Objetivo"

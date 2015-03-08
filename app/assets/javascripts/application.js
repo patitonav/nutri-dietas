@@ -68,6 +68,15 @@ function smoker() {
 		$('#user_smoker_amount').val("");
 	}      
 }
+function menstruation() {
+	if( $('#user_sex').val() == "F") {
+		$('#user_menstruation').show();
+		$('#menstruation_label').show();
+	} else {
+		$('#user_menstruation').hide();
+		$('#menstruation_label').hide();
+	}      
+}
 function allergies() {
 	if( $('#allergies_true').val() == "SI") {
 		$('#user_allergies').show();
@@ -85,6 +94,7 @@ $(document).on("ready page:change", function() {
 	cancer();
 	smoker();
 	half_vegetarian();
+	menstruation();
 	$('.datepicker').datepicker({
     	format: "dd/mm/yyyy",
     	startView: 2,
@@ -94,6 +104,7 @@ $(document).on("ready page:change", function() {
 	$('#registration_how_meet').change(function () {how_meet();});
 	$('#allergies_true').change(function () {allergies();});
 	$('#user_cancer').bind('change',function () {cancer();});
+	$('#user_sex').bind('change',function () {menstruation();});
 	$('#user_smoker').bind('change',function () {smoker();});
 	$('#registration_half_vegetarian').bind('change',function () {half_vegetarian();});
 
