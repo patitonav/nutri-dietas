@@ -12,14 +12,14 @@
               <div class = "row">
                 <div class="col-md-6">
                   <div class="form-group">
-                    <%= f.label :name , class: "control-label"%>
-                    <%= f.text_field :name, class: "form-control",autofocus: true %>
+                    <%= f.label :name , class: "control-label" %>
+                    <%= f.text_field :name, class: "form-control",autofocus: true, required: true %>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
                     <%= f.label :last_name , class: "control-label"%>
-                    <%= f.text_field :last_name, class: "form-control" %>
+                    <%= f.text_field :last_name, class: "form-control", required: true %>
                   </div>
                 </div>
               </div>
@@ -27,19 +27,19 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <%= f.label :address , class: "control-label"%>
-                    <%= f.text_field :address, class: "form-control" %>
+                    <%= f.text_field :address, class: "form-control", required: true%>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
                     <%= f.label :city, class: "control-label" %>
-                    <%= f.text_field :city, class: "form-control" %>
+                    <%= f.text_field :city, class: "form-control", required: true%>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
                     <%= f.label :country , class: "control-label"%>
-                    <%= f.text_field :country, class: "form-control" %>
+                    <%= f.text_field :country, class: "form-control", required: true%>
                   </div>
                 </div>
               </div>
@@ -47,13 +47,13 @@
                 <div class="col-md-5">
                   <div class="form-group">
                     <%= f.label :phone, class: "control-label" %>
-                    <%= f.text_field :phone, class: "form-control" %>
+                    <%= f.text_field :phone, class: "form-control"%>
                   </div>
                 </div>
                 <div class="col-md-5">
                   <div class="form-group">
                     <%= f.label :cellphone , class: "control-label"%>
-                    <%= f.text_field :cellphone, class: "form-control" %>
+                    <%= f.text_field :cellphone, class: "form-control", required: true%>
                   </div>
                 </div>
               </div>
@@ -73,7 +73,7 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <%= f.label :social_security_number, class: "control-label" %>
-                    <%= f.text_field :social_security_number, class: "form-control" %>
+                    <%= f.text_field :social_security_number, class: "form-control"%>
                   </div>
                 </div>
               </div>
@@ -93,7 +93,7 @@
                 <div class="col-md-5">
                   <div class="form-group">
                     <%= f.label :birhtday , class: "control-label"%>
-                    <%= f.text_field :birhtday, class: "datepicker", readonly:true, style:"background:white;cursor:default;", disabled: false %>
+                    <%= f.text_field :birhtday, class: "datepicker", readonly:true, style:"background:white;cursor:default;", disabled: false, required: true %>
                   </div>
                 </div>
               </div>
@@ -101,19 +101,19 @@
                 <div class="col-md-7">
                   <div class="form-group">
                     <%= f.label :profesion, class: "control-label" %>
-                    <%= f.text_field :profesion, class: "form-control" %>
+                    <%= f.text_field :profesion, class: "form-control"%>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="form-group">
                     <%= f.label :job_hs , class: "control-label"%>
-                    <%= f.select(:job_hs, User::JOB_HS, {}, {class: "form-control", required: true}) %>
+                    <%= f.select(:job_hs, User::JOB_HS, {}, {class: "form-control"}) %>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="form-group">
                     <%= f.label :job_type, class: "control-label" %>
-                    <%= f.select(:job_type, User::JOB_TYPE, {}, {class: "form-control", required: true}) %>
+                    <%= f.select(:job_type, User::JOB_TYPE, {}, {class: "form-control"}) %>
                   </div>
                 </div>
               </div>
@@ -122,9 +122,9 @@
               <div class="row">
                 <div class="col-md-3">
                   <div class="form-group">
-                    <%= f.label :weight_max, class: "control-label" %>
+                    <%= f.label :weight_max, class: "control-label"%>
                     <div class="input-group">
-                      <%= f.text_field :weight_max, class: "form-control", placeholder: "0.0" %>
+                      <%= f.text_field :weight_max, class: "form-control", required: true, placeholder: "0.0" %>
                       <div class="input-group-addon">kg</div>
                     </div>
                     (Edad Adulta)
@@ -134,7 +134,7 @@
                   <div class="form-group">
                     <%= f.label :weight_min, class: "control-label"%>
                     <div class="input-group">
-                      <%= f.text_field :weight_min, class: "form-control", placeholder: "0.0" %>
+                      <%= f.text_field :weight_min, class: "form-control", required: true, placeholder: "0.0" %>
                       <div class="input-group-addon">kg</div>
                     </div>
                     (Edad Adulta)
@@ -144,7 +144,7 @@
                   <div class="form-group">
                     <%= f.label :weight_avg, class: "control-label" %>
                     <div class="input-group">
-                      <%= f.text_field :weight_avg, class: "form-control", placeholder: "0.0" %>
+                      <%= f.text_field :weight_avg, class: "form-control", required: true, placeholder: "0.0" %>
                       <div class="input-group-addon">kg</div>
                     </div>
                     (Edad Adulta)
@@ -156,7 +156,7 @@
                   <div class="form-group">
                     <%= f.label :weight_now, class: "control-label" %>
                     <div class="input-group">
-                      <%= f.text_field :weight_now, class: "form-control", placeholder: "0.0" %>
+                      <%= f.text_field :weight_now, class: "form-control", required: true, placeholder: "0.0" %>
                       <div class="input-group-addon">kg</div>
                     </div>
                   </div>
@@ -165,7 +165,7 @@
                   <div class="form-group">
                     <%= f.label :weight_exp, class: "control-label" %>
                     <div class="input-group">
-                      <%= f.text_field :weight_exp, class: "form-control", placeholder: "0.0" %>
+                      <%= f.text_field :weight_exp, class: "form-control", required: true, placeholder: "0.0" %>
                       <div class="input-group-addon">kg</div>
                     </div>
                   </div>
@@ -173,7 +173,7 @@
               </div>
               <div class="form-group">
                 <%= f.label :objective %>
-                <%= f.text_area :objective, class: "form-control" %>
+                <%= f.text_area :objective, class: "form-control", required: true%>
               </div>
               <div class="row">
                 <div class="col-md-8">
@@ -438,7 +438,7 @@
                 <div class="col-md-3">
                   <div class="form-group">
                     <div class="input-group">
-                      <%= f.text_field :wrist_size, class: "form-control" , placeholder: "0.0" %>
+                      <%= f.text_field :wrist_size, class: "form-control", required: true, placeholder: "0.0" %>
                       <div class="input-group-addon">cm</div>
                     </div>
                     (Mano no hábil)
@@ -452,7 +452,7 @@
                 <div class="col-md-3">
                   <div class="form-group">
                     <div class="input-group">
-                      <%= f.text_field :height, class: "form-control" , placeholder: "0.0" %>
+                      <%= f.text_field :height, class: "form-control", required: true, placeholder: "0.0" %>
                       <div class="input-group-addon">m</div>
                     </div>
                   </div>
@@ -534,15 +534,15 @@
     <hr>
     <div class="form-group">
       <%= f.label :email %>
-      <%= f.email_field :email, class: "form-control" %>
+      <%= f.email_field :email, class: "form-control", required: true %>
     </div>
     <div class="form-group">
       <%= f.label :password %>
-      <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+      <%= f.password_field :password, autocomplete: "off", class: "form-control", required: true %>
     </div>
     <div class="form-group">
       <%= f.label :password_confirmation %>
-      <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
+      <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", required: true %>
     </div>
     <div class="form-group">
       <%= f.submit "Registrarse", class: 'btn btn-lg btn-primary btn-block' %>
