@@ -10,12 +10,13 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require twitter/bootstrap
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui
 //= require_tree .
-
+//= require twitter/bootstrap
+//= require bootstrap
+//= require bootstrap-datepicker
 
 function how_meet() {
 	if( ($('#how_meet_select').val() == "PACIENTE: ") || ($('#how_meet_select').val() == "DOCTOR: " ) || ($('#how_meet_select').val() == "OTRO: ") ) {
