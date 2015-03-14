@@ -36,6 +36,7 @@ function half_vegetarian() {
 		$('#user_meat').attr('disabled', false);
 		$('#user_chicken').attr('disabled', false);
 		$('#user_fish').attr('disabled', false);
+		$('#alert-div').show();
 	} else {
 		$('#user_pork').attr('disabled', true);
 		$('#user_pork').prop('checked', true);
@@ -45,6 +46,7 @@ function half_vegetarian() {
 		$('#user_chicken').prop('checked', true);
 		$('#user_fish').attr('disabled', true);
 		$('#user_fish').prop('checked', true);
+		$('#alert-div').hide();
 	}      
 }
 function cancer() {
@@ -67,6 +69,15 @@ function smoker() {
 		$('#user_smoker_amount').val("");
 	}      
 }
+function menstruation() {
+	if( $('#user_sex').val() == "F") {
+		$('#user_menstruation').show();
+		$('#menstruation_label').show();
+	} else {
+		$('#user_menstruation').hide();
+		$('#menstruation_label').hide();
+	}      
+}
 function allergies() {
 	if( $('#allergies_true').val() == "SI") {
 		$('#user_allergies').show();
@@ -79,10 +90,22 @@ function allergies() {
 }
 
 $(document).on("ready page:change", function() {
+	how_meet();
+	allergies();
+	cancer();
+	smoker();
+	half_vegetarian();
+	menstruation();
+	$('.datepicker').datepicker({
+    	format: "dd/mm/yyyy",
+    	startView: 2,
+    	language: "es"
+	});
 	$('#how_meet_select').change(function () {how_meet();});
 	$('#registration_how_meet').change(function () {how_meet();});
 	$('#allergies_true').change(function () {allergies();});
 	$('#user_cancer').bind('change',function () {cancer();});
+	$('#user_sex').bind('change',function () {menstruation();});
 	$('#user_smoker').bind('change',function () {smoker();});
 	$('#registration_half_vegetarian').bind('change',function () {half_vegetarian();});
 

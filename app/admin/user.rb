@@ -1,5 +1,5 @@
 ActiveAdmin.register User do
-  permit_params :email, :password, :password_confirmation,:name,:last_name,:address,:city,:country,:phone,:cellphone,:social_security,:social_security_plan,:social_security_number,:marital_status,:birhtday,:profesion,:sex,:job_hs,:job_type,:weight_max,:weight_min,:weight_avg,:weight_now,:weight_exp,:objective,:family,:cooks,:buys,:allergies,:kosher,:vegetarian,:ovolacto,:lacto,:pork,:meat,:chicken,:fish,:celiac,:swallowing,:mastication,:nausea,:diarrhea,:vomits,:constipation,:anemia,:hypertension,:diabetes,:heart_problems,:overweight,:cholesterol,:bulimia,:anorexia,:cancer,:cancer_type,:illness_other,:smoker,:smoker_amount,:medication,:wrist_size,:height,:vitamins,:sport1,:sport1_frecuency,:sport2,:sport2_frecuency,:sport3,:sport3_frecuency,:menstruation,:how_meet,:comments
+  permit_params :email, :password, :password_confirmation,:name,:last_name,:address,:city,:country,:phone,:cellphone,:social_security,:social_security_plan,:social_security_number,:marital_status,:birhtday,:profesion,:sex,:job_hs,:job_type,:weight_max,:weight_min,:weight_avg,:weight_now,:weight_exp,:objective,:family,:cooks,:buys,:allergies,:kosher,:vegetarian,:ovolacto,:lacto,:pork,:meat,:chicken,:fish,:celiac,:swallowing,:mastication,:nausea,:diarrhea,:vomits,:constipation,:anemia,:hypertension,:diabetes,:heart_problems,:overweight,:cholesterol,:bulimia,:anorexia,:cancer,:cancer_type,:illness_other,:smoker,:smoker_amount,:medication,:wrist_size,:height,:vitamins,:sport1,:sport1_frecuency,:sport2,:sport2_frecuency,:sport3,:sport3_frecuency,:menstruation,:how_meet,:comments,:intestinal_diseases
   index do
     selectable_column
     id_column
@@ -69,6 +69,7 @@ ActiveAdmin.register User do
       f.input :cholesterol
       f.input :bulimia
       f.input :anorexia
+      f.input :intestinal_diseases
       f.input :cancer
       f.input :cancer_type
       f.input :illness_other

@@ -1,45 +1,45 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: 'container'}) do |f| %>
-    <%= devise_error_messages! %>
     <div id="bg">
       <%= image_tag('nutri5.jpg') %>
     </div>
     <div class="row vertical-offset-100">
-      <div class="col-md-7 col-md-offset-2">
+      <div class="col-md-6 col-md-offset-3">
         <div class="panel panel-default">
-          <%= image_tag 'logo-nutri-salud-con-nombre.jpg', size: "500", class: "img-responsive center-block"%>
+          <%= image_tag 'logo-nutri-salud-con-nombre.jpg', size: "450", class: "img-responsive center-block"%>
           <div class="panel-body">
             <fieldset>
+              <%= devise_error_messages! %>
               <div class = "row">
                 <div class="col-md-6">
                   <div class="form-group">
-                    <%= f.label :name , class: "control-label"%>
-                    <%= f.text_field :name, class: "form-control",autofocus: true %>
+                    <%= f.label :name , class: "control-label" %>
+                    <%= f.text_field :name, class: "form-control",autofocus: true, required: true %>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
                     <%= f.label :last_name , class: "control-label"%>
-                    <%= f.text_field :last_name, class: "form-control" %>
+                    <%= f.text_field :last_name, class: "form-control", required: true %>
                   </div>
                 </div>
               </div>
               <div class = "row">
-                <div class="col-md-5">
+                <div class="col-md-6">
                   <div class="form-group">
                     <%= f.label :address , class: "control-label"%>
-                    <%= f.text_field :address, class: "form-control" %>
+                    <%= f.text_field :address, class: "form-control", required: true%>
                   </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-6">
                   <div class="form-group">
                     <%= f.label :city, class: "control-label" %>
-                    <%= f.text_field :city, class: "form-control" %>
+                    <%= f.text_field :city, class: "form-control", required: true%>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-6">
                   <div class="form-group">
                     <%= f.label :country , class: "control-label"%>
-                    <%= f.text_field :country, class: "form-control" %>
+                    <%= f.text_field :country, class: "form-control", required: true%>
                   </div>
                 </div>
               </div>
@@ -47,13 +47,13 @@
                 <div class="col-md-5">
                   <div class="form-group">
                     <%= f.label :phone, class: "control-label" %>
-                    <%= f.text_field :phone, class: "form-control" %>
+                    <%= f.text_field :phone, class: "form-control"%>
                   </div>
                 </div>
                 <div class="col-md-5">
                   <div class="form-group">
                     <%= f.label :cellphone , class: "control-label"%>
-                    <%= f.text_field :cellphone, class: "form-control" %>
+                    <%= f.text_field :cellphone, class: "form-control", required: true%>
                   </div>
                 </div>
               </div>
@@ -64,16 +64,16 @@
                     <%= f.select(:social_security, User::SOCIAL_SECURITY_TYPES, {}, {class: "form-control", required: true}) %>
                   </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-3">
                   <div class="form-group">
                     <%= f.label :social_security_plan, class: "control-label" %>
                     <%= f.select(:social_security_plan, User::SOCIAL_SECURITY_PLAN_TYPES, {}, {class: "form-control", required: true}) %>
                   </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-6">
                   <div class="form-group">
                     <%= f.label :social_security_number, class: "control-label" %>
-                    <%= f.text_field :social_security_number, class: "form-control" %>
+                    <%= f.text_field :social_security_number, class: "form-control"%>
                   </div>
                 </div>
               </div>
@@ -90,51 +90,64 @@
                     <%= f.select(:sex, User::SEX, {}, {class: "form-control", required: true}) %>
                   </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-5">
                   <div class="form-group">
                     <%= f.label :birhtday , class: "control-label"%>
-                    <%= f.text_field :birhtday, class: "form-control" %>
+                    <%= f.text_field :birhtday, class: "datepicker", readonly:true, style:"background:white;cursor:default;", disabled: false, required: true %>
                   </div>
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-5">
+                <div class="col-md-7">
                   <div class="form-group">
                     <%= f.label :profesion, class: "control-label" %>
-                    <%= f.text_field :profesion, class: "form-control" %>
+                    <%= f.text_field :profesion, class: "form-control"%>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="form-group">
                     <%= f.label :job_hs , class: "control-label"%>
-                    <%= f.select(:job_hs, User::JOB_HS, {}, {class: "form-control", required: true}) %>
+                    <%= f.select(:job_hs, User::JOB_HS, {}, {class: "form-control"}) %>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-4">
                   <div class="form-group">
                     <%= f.label :job_type, class: "control-label" %>
-                    <%= f.select(:job_type, User::JOB_TYPE, {}, {class: "form-control", required: true}) %>
+                    <%= f.select(:job_type, User::JOB_TYPE, {}, {class: "form-control"}) %>
                   </div>
                 </div>
               </div>
-              <%= f.label "Pesos" %>
+              <h3>Pesos</h3>
+              <hr>
               <div class="row">
                 <div class="col-md-3">
                   <div class="form-group">
-                    <%= f.label :weight_max, class: "control-label" %>
-                    <%= f.text_field :weight_max, class: "form-control" %>
+                    <%= f.label :weight_max, class: "control-label"%>
+                    <div class="input-group">
+                      <%= f.text_field :weight_max, class: "form-control", required: true, placeholder: "0.0" %>
+                      <div class="input-group-addon">kg</div>
+                    </div>
+                    (Edad Adulta)
                   </div>
                 </div>
                 <div class="col-md-3">
                   <div class="form-group">
                     <%= f.label :weight_min, class: "control-label"%>
-                    <%= f.text_field :weight_min, class: "form-control" %>
+                    <div class="input-group">
+                      <%= f.text_field :weight_min, class: "form-control", required: true, placeholder: "0.0" %>
+                      <div class="input-group-addon">kg</div>
+                    </div>
+                    (Edad Adulta)
                   </div>
                 </div>
                 <div class="col-md-3">
                   <div class="form-group">
                     <%= f.label :weight_avg, class: "control-label" %>
-                    <%= f.text_field :weight_avg, class: "form-control" %>
+                    <div class="input-group">
+                      <%= f.text_field :weight_avg, class: "form-control", required: true, placeholder: "0.0" %>
+                      <div class="input-group-addon">kg</div>
+                    </div>
+                    (Edad Adulta)
                   </div>
                 </div>
               </div>
@@ -142,19 +155,25 @@
                 <div class="col-md-3">
                   <div class="form-group">
                     <%= f.label :weight_now, class: "control-label" %>
-                    <%= f.text_field :weight_now, class: "form-control" %>
+                    <div class="input-group">
+                      <%= f.text_field :weight_now, class: "form-control", required: true, placeholder: "0.0" %>
+                      <div class="input-group-addon">kg</div>
+                    </div>
                   </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-3">
                   <div class="form-group">
                     <%= f.label :weight_exp, class: "control-label" %>
-                    <%= f.text_field :weight_exp, class: "form-control" %>
+                    <div class="input-group">
+                      <%= f.text_field :weight_exp, class: "form-control", required: true, placeholder: "0.0" %>
+                      <div class="input-group-addon">kg</div>
+                    </div>
                   </div>
                 </div>
               </div>
               <div class="form-group">
                 <%= f.label :objective %>
-                <%= f.text_area :objective, class: "form-control" %>
+                <%= f.text_area :objective, class: "form-control", required: true%>
               </div>
               <div class="row">
                 <div class="col-md-8">
@@ -165,13 +184,13 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-5">
                   <div class="form-group">
                     <%= f.label :cooks %>
                     <%= f.select(:cooks, User::COOKS, {}, {class: "form-control", required: true}) %>
                   </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-5">
                   <div class="form-group">
                     <%= f.label :buys %>
                     <%= f.select(:buys, User::BUYS, {}, {class: "form-control", required: true}) %>
@@ -179,23 +198,16 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-2">
-                  <div class="form-group">
+                <div class="col-md-4">
+                    <div class="form-group">
                     <%= label(:registration,:allergies_true)%>
-                  </div>
-                </div>
-                <div class="col-md-2">
-                  <div class="form-group">
                     <%= select(:allergies,:true ,[['NO','NO'],['SI','SI']], {},required: true, class: "form-control") %>
                   </div>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-6">
+                  <div class="form-group"></div>
                   <div class="form-group">
                     <%= f.label :allergies, :id => "user_allergies_label" %>
-                  </div>
-                </div>
-                <div class="col-md-5">
-                  <div class="form-group">
                     <%= f.text_field :allergies, class: "form-control"%>
                   </div>
                 </div>
@@ -205,13 +217,15 @@
               </div>
               <div class="row">
                 <div class="col-md-2">
+                  <div class="form-group"></div>
                   <div class="form-group">
                     <%= f.label :kosher %>
                     <%= f.check_box :kosher,checked: false %>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                   <div class="form-group">
+                    <div class="form-group"></div>
                     <%= f.label :vegetarian %>
                     <%= f.check_box :vegetarian,checked: false%>
                   </div>
@@ -229,6 +243,7 @@
                   </div>
                 </div>
                 <div class="col-md-2">
+                  <div class="form-group"></div>
                   <div class="form-group">
                     <%= f.label :celiac %>
                     <%= f.check_box :celiac,checked: false%>
@@ -237,8 +252,12 @@
               </div>
               <div class="form-group">
                 <%= label(:registration, :half_vegetarian) %>
-                <%= check_box :registration,:half_vegetarian, checked: true%>
+                <%= check_box :registration,:half_vegetarian, checked: false%>
+                <p>(Ustd. es semi-vegetariano si no come alguno de los alimentos listados)</p>
               </div>
+              <div class="alert alert-warning" role="alert" id="alert-div">
+                   <strong>Atencion!</strong> Destilde aquellos alimentos que no come.
+                </div>
               <div class="row">
                 <div class="col-md-3">
                   <div class="form-group">
@@ -301,7 +320,7 @@
                     <%= f.check_box :vomits,checked: false%>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-4">
                   <div class="form-group">
                     <%= f.label :constipation %>
                     <%= f.check_box :constipation ,checked: false%>
@@ -318,7 +337,7 @@
                     <%= f.check_box :anemia ,checked: false%>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                   <div class="form-group">
                     <%= f.label :hypertension %>
                     <%= f.check_box :hypertension ,checked: false%>
@@ -356,7 +375,7 @@
                     <%= f.check_box :bulimia ,checked: false %>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                   <div class="form-group">
                     <%= f.label :anorexia %>
                     <%= f.check_box :anorexia ,checked: false%>
@@ -364,8 +383,15 @@
                 </div>
               </div>
               <div class="row">
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <%= f.label :intestinal_diseases %>
+                    <%= f.check_box :intestinal_diseases ,checked: false%>
+                  </div>
+                </div>
                 <div class="col-md-2">
                   <div class="form-group">
+                    <div class="form-group"></div>
                     <%= f.label :cancer %>
                     <%= f.check_box :cancer %>
                   </div>
@@ -393,42 +419,42 @@
                 <div class="col-md-3">
                   <%= f.label :smoker_amount, :id => "smoker_amount_label"%>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-3">
                   <%= f.text_field :smoker_amount, class: "form-control" %>
                 </div>
               </div>
               <hr>
-              <div class="row">
-                <div class="col-md-2">
                   <div class="form-group">
                     <%= f.label :medication %>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
                     <%= f.text_field :medication, class: "form-control" %>
+                    (Incluir anticonceptivos)
                   </div>
-                </div>
-              </div>
               <div class="row">
-                <div class="col-md-2">
+                <div class="col-md-3">
                   <div class="form-group">
                     <%= f.label :wrist_size %>
                   </div>
                 </div>
                 <div class="col-md-3">
                   <div class="form-group">
-                    <%= f.text_field :wrist_size, class: "form-control" %>
+                    <div class="input-group">
+                      <%= f.text_field :wrist_size, class: "form-control", required: true, placeholder: "0.0" %>
+                      <div class="input-group-addon">cm</div>
+                    </div>
+                    (Mano no hábil)
                   </div>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-2">`
                   <div class="form-group">
                     <%= f.label :height %>
                   </div>
                 </div>
                 <div class="col-md-3">
                   <div class="form-group">
-                    <%= f.text_field :height, class: "form-control" %>
+                    <div class="input-group">
+                      <%= f.text_field :height, class: "form-control", required: true, placeholder: "0.0" %>
+                      <div class="input-group-addon">m</div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -441,13 +467,13 @@
                 <h3>Deportes</h3>
               </div>
               <div class="row">
-                <div class="col-md-5">         
+                <div class="col-md-6">         
                   <div class="form-group">
                     <%= f.label :sport1 %>
                     <%= f.text_field :sport1, class: "form-control" %>
                   </div>
                 </div>
-            <div class="col-md-5">
+            <div class="col-md-4">
               <div class="form-group">
                 <%= f.label :sport1_frecuency %>
                 <%= f.select(:sport1_frecuency, User::SPORT, {}, {class: "form-control"}) %>
@@ -455,13 +481,13 @@
             </div>
           </div>
           <div class="row">
-           <div class="col-md-5">         
+           <div class="col-md-6">         
             <div class="form-group">
               <%= f.label :sport2 %>
               <%= f.text_field :sport2, class: "form-control" %>
             </div>
           </div>
-          <div class="col-md-5">
+          <div class="col-md-4">
             <div class="form-group">
               <%= f.label :sport2_frecuency %>
               <%= f.select(:sport2_frecuency, User::SPORT, {}, {class: "form-control"}) %>
@@ -469,13 +495,13 @@
           </div>
         </div>
         <div class="row">
-         <div class="col-md-5">         
+         <div class="col-md-6">         
           <div class="form-group">
             <%= f.label :sport3 %>
             <%= f.text_field :sport3, class: "form-control" %>
           </div>
         </div>
-        <div class="col-md-5">
+        <div class="col-md-4">
           <div class="form-group">
             <%= f.label :sport3_frecuency %>
             <%= f.select(:sport3_frecuency, User::SPORT, {}, {class: "form-control"}) %>
@@ -483,9 +509,13 @@
         </div>
       </div>
       <hr>
-      <div class="form-group">
-        <%= f.label :menstruation %>
-        <%= f.text_field :menstruation, class: "form-control" %>
+      <div class="row">
+         <div class="col-md-5"> 
+          <div class="form-group">
+            <%= f.label :menstruation , :id => "menstruation_label"%>
+            <%= f.text_field :menstruation, class: "datepicker", readonly:true, style:"background:white;cursor:default;", disabled: false %>
+          </div>
+        </div>
       </div>
       <hr>
       <div class="form-group">
@@ -493,7 +523,7 @@
         <%= select(:how_meet,:select ,[['Cartilla de DOSUBA','CARTILLA DE DOSUBA'],['Cartilla de OSDE','CARTILLA DE OSDE'],['Internet','INTERNET'],['TV','TV'],['Medios Graficos','MEDIOS GRAFICOS'],['Otro Paciente','PACIENTE: '],['Otro Profesional','DOCTOR: '],['Otro','OTRO: ']], {},required: true) %>
       </div>
       <div class="form-group">
-        <%= label_tag(:registration,:how_meet, id: 'how_meet_tag')%>
+        <%= label_tag("¿Cuál?",nil, id: 'how_meet_tag')%>
         <%= text_field(:registration, :how_meet, class: "form-control")%>
         <%= f.text_field(:how_meet, :style => 'visibility: hidden') %>
       </div>
@@ -504,15 +534,15 @@
     <hr>
     <div class="form-group">
       <%= f.label :email %>
-      <%= f.email_field :email, class: "form-control" %>
+      <%= f.email_field :email, class: "form-control", required: true %>
     </div>
     <div class="form-group">
       <%= f.label :password %>
-      <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+      <%= f.password_field :password, autocomplete: "off", class: "form-control", required: true %>
     </div>
     <div class="form-group">
       <%= f.label :password_confirmation %>
-      <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
+      <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", required: true %>
     </div>
     <div class="form-group">
       <%= f.submit "Registrarse", class: 'btn btn-lg btn-primary btn-block' %>
