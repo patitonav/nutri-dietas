@@ -10,11 +10,12 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require twitter/bootstrap
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui
 //= require_tree .
+//= require twitter/bootstrap
+//= require bootstrap
 //= require bootstrap-datepicker
 
 function how_meet() {
@@ -107,7 +108,5 @@ $(document).on("ready page:change", function() {
 	$('#user_sex').bind('change',function () {menstruation();});
 	$('#user_smoker').bind('change',function () {smoker();});
 	$('#registration_half_vegetarian').bind('change',function () {half_vegetarian();});
-
-
+	
 });
-
