@@ -108,6 +108,5 @@ $(document).on("ready page:change", function() {
 	$('#user_sex').bind('change',function () {menstruation();});
 	$('#user_smoker').bind('change',function () {smoker();});
 	$('#registration_half_vegetarian').bind('change',function () {half_vegetarian();});
-
-
+	
 });
