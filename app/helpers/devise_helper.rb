@@ -18,8 +18,6 @@ module DeviseHelper
      <strong>#{sentence}</strong>
      <ul>#{messages}</ul>
    </div>
- </div>
- <div id="error_explanation">
   HTML
 
   html.html_safe
