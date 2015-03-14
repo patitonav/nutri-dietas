@@ -139,6 +139,11 @@ es:
       update: Actualizar %{model}
     links:
       edit: Editar
+    label:
+      registration:
+        allergies_true: "¿Es alérgico a algún alimento?"
+        half_vegetarian: "Semi-vegetariano"
+        how_meet_tag: "¿Cuál?"
   number:
     currency:
       format:
@@ -199,7 +204,7 @@ es:
       short: ! '%d de %b a las %H:%M hrs'
     pm: pm
   activerecord:
-    models:
+    models: 
       publication: Publicación
       user: Usuario
     attributes:
@@ -225,22 +230,22 @@ es:
         sex: "Sexo"
         birhtday: "Fecha de nacimiento"
         profesion: "Profesión/Ocupación"
-        job_hs: "Horas de trabajo diarias"
+        job_hs: "Hs de trabajo diarias"
         job_type: "Tipo de trabajo"
-        weight_max: "Peso maximo (edad adulta)"
-        weight_min: "Peso minimo (edad adulta)"
-        weight_avg: "Peso habitual (edad adulta)"
+        weight_max: "Peso maximo"
+        weight_min: "Peso minimo"
+        weight_avg: "Peso habitual"
         weight_now: "Peso actual"
-        weight_exp: "Peso al que quiere llegar"
+        weight_exp: "Peso deseado"
         objective: "Objetivo"
         family: "¿Con quién vive?"
         cooks: "¿Quién cocina?"
         allergies: "¿Cuales?"
         kosher: "Kosher"
         vegetarian: "Vegetariano"
-        ovolacto: "Ovolacto"
-        lacto: "Lacto"
-        celiac: "Celiac"
+        ovolacto: "Ovolacto vegetariano"
+        lacto: "Lacto vegetariano"
+        celiac: "Celiaco"
         pork: "Cerdo"
         meat: "Carnes rojas"
         chicken: "Pollo"
@@ -249,6 +254,7 @@ es:
         mastication: " Masticación"
         nausea: "Nauseas"
         diarrhea: "Diarrea"
+        intestinal_diseases: "Enfermedades intestinales"
         vomits: " Vómitos"
         constipation: "Estreñimiento"
         anemia: "Anemia"
@@ -264,8 +270,8 @@ es:
         illness_other: "Otra enfermedad"
         smoker: "Fumador"
         smoker_amount: "Cantidad por dia"
-        medication: "Medicacion (incluir anticonceptivos)"
-        wrist_size: "Circunferencia de muñeca (mano no hábil)"
+        medication: "Medicacion"
+        wrist_size: "Circunferencia de muñeca"
         height: "Altura"
         vitamins: "¿Toma algun suplemento?"
         sport1: "Actividad fisica"

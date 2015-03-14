@@ -13,8 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
 /*
  *= require bootstrap_and_overrides
+ *= require bootstrap-datepicker
  */
  .fullscreen_bg {
  	position: fixed;
