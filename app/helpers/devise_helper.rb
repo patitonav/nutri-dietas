@@ -29,6 +29,7 @@ def devise_error_messages_login!
   flash_alerts.push(flash[:error]) if flash[:error]
   flash_alerts.push(flash[:alert]) if flash[:alert]
   flash_alerts.push(flash[:notice]) if flash[:notice]
+  return "" if flash_alerts.empty?
   messages = flash_alerts.map { |msg| content_tag(:li, msg) }.join
   html = <<-HTML
     <div class="alert alert-danger" role="alert">
