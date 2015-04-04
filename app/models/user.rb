@@ -14,4 +14,7 @@ class User < ActiveRecord::Base
   BUYS = [['Usted','SI'],['Otro','NO']]
   SPORT = [[],['1',1],['2',2],['3',3],['4',4],['5',5],['6',6],['7',7]]
 
+  has_one :diet
+  accepts_nested_attributes_for :diet
+
 end
