@@ -1,2 +1,19 @@
-Frutas en el desayuno
-<%=@diet.breakfast_fruits%>
+<%= render :partial => 'dashboard/navigation' %>
+<div class="container theme-showcase" role="main">
+	<div class="jumbotron">
+		<div class="container">
+			<h1>Dieta</h1>
+			<p>Atravez de esta plataforma usted podra consultar sus dietas y cantidades permitidas, ver de forma grafica su evolucion en el proceso, e interactuar con la licenciada Gabin.</p>
+		</div>
+	</div>
+	<div class="container theme-showcase" role="main">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title">Frutas en el desayuno</h3>
+			</div>
+			<div class="panel-body">
+				<%=@diet.breakfast_fruits%>
+			</div>
+		</div>
+	</div>
+</div>
