@@ -3,11 +3,26 @@
 	<div class="jumbotron">
 		<div class="container">
 			<h1>Dieta</h1>
-			<p>Atravez de esta plataforma usted podra consultar sus dietas y cantidades permitidas, ver de forma grafica su evolucion en el proceso, e interactuar con la licenciada Gabin.</p>
+			<p>En esta seccion usted podra disponer de las dietas asignadas por la licenciada para su plan dietario, asi como ver las cantidades de los alimentos permitidos.</p>
 		</div>
 	</div>
 </div>
 <div class="container theme-showcase" role="main">
+	<div class="page-header">
+        <h1>Dietas disponibles</h1>
+     </div>
+	<div class="row">
+		<% @diets_set.each do |d|%>
+		<div class="col-xs-6 col-md-2">
+			<a href='#' class="thumbnail">
+				<%= image_tag 'nutri2.jpg'%>
+			</a>
+		</div>
+		<% end %>
+	</div>
+	<div class="page-header">
+        <h1>Cantidades permitidas</h1>
+     </div>
 	<div class="row">
 		<div class="col-md-6">
 			<div class="panel panel-primary">
@@ -184,7 +199,7 @@
 		</div>
 	</div>
 	<hr>
-      <footer>
-        <p>&copy;   Esta pagina no suplanta la visita al consultorio...</p>
-      </footer>
+	<footer>
+		<p>&copy;   Esta pagina no suplanta la visita al consultorio...</p>
+	</footer>
 </div>
