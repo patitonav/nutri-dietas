@@ -15,6 +15,7 @@
         <li><%= link_to 'Dieta', current_user.diet, class:"navbar-brand" %></li>
         <li><a class="navbar-brand" href="#contact">Medidas</a></li>
         <li><a class="navbar-brand" href="#contact">Estadisticas</a></li>
+        <li><%= link_to 'Ayuda', static_pages_help_path, class:"navbar-brand" %></li>
         <li class="dropdown">
           <a href="#" class="navbar-brand" data-toggle="dropdown" role="button" aria-expanded="false"><%=current_user.name %><span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
